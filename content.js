@@ -23,19 +23,19 @@ function check_followings(me) {
 			contentType: 'application/x-www-form-urlencoded',
 			statusCode: {
 				200: function(data, textStatus, jqXHR) {
-					var div = $("<div />").addClass("tfc_description");
+					var div = $("<div />").addClass("ie_description");
 					if (data.response.is_blog_following_you == true) {
-						div.html('Seni takip ediyor! <a title="Uygulamayı oluşturan: @duygusalyanim" href="http://duygusalyanim.tumblr.com">©</a>');
-						div.addClass("tfc_follower");
+						div.html('This user following you!');
+						div.addClass("ie_follower");
 					} else {
-						div.html('Seni takip etmiyor! <a title="Uygulamayı oluşturan: @duygusalyanim" href="http://duygusalyanim.tumblr.com">©</a>');
-						div.addClass("tfc_non_follower");
+						div.html('This user not following you!');
+						div.addClass("ie_non_follower");
 					}
 					$('.info', element).append(div);
 				},
 				403: function(jqXHR, textStatus, errorThrown) {
 					data = $.parseJSON(jqXHR.responseText);
-					var div = $("<div />").addClass("tfc_not_sure").text("İkinci blogu seni takip etmiyor.");
+					var div = $("<div />").addClass("ie_not_sure").text("İkinci blogu seni takip etmiyor.");
 					$('.info', element).append(div);
 				}
 			}

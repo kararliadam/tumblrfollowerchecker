@@ -1,0 +1,15 @@
+.description, .not_sure {
+    font-size: 12px;
+}
+
+.follower {
+    color: #4CD964;
+}
+
+.non_follower {
+    color: #FF2D55;
+}
+
+.not_sure {
+    color: #007AFF;
+}

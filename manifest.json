@@ -1,0 +1,20 @@
+{
+   "author": "İbrahim Erdoğan",
+   "content_scripts": [ {
+      "css": [ "styles.css" ],
+      "js": [ "jquery.js", "content.js" ],
+      "matches": [ "https://www.tumblr.com/following", "https://www.tumblr.com/following/*" ]
+   } ],
+   "description": "Tumblr'da takip ettiğiniz kullanıcıların sizi takip edip etmediğini kolaylıkla öğrenebilirsiniz.",
+   "homepage_url": "https://duygusalyanim.tumblr.com/",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
+   "manifest_version": 2,
+   "name": "Tumblr Follower Checker",
+   "permissions": [ "activeTab", "https://ajax.googleapis.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}
